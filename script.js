@@ -2,7 +2,7 @@ var inputText = document.querySelector("#input-text");
 var btnTranslate = document.querySelector("#btn-translate");
 var outputText = document.querySelector("#output-text");
 
-const serverUrl = "https://api.funtranslations.com/translate/klingon.json"
+const serverUrl = "https://api.funtranslations.com/translate/morse.json"
 // const serverUrl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 
 // console.log(btnTranslate);
@@ -18,7 +18,7 @@ function errorHandler(error) {
     alert("Sorry! Some issue with server...try again after sometime");
 }
 
-function translateToKlingon() {
+function translateToMorse() {
 
     fetch(generateUrl(inputText.value))
         .then(response => response.json())
@@ -28,4 +28,4 @@ function translateToKlingon() {
         .catch(errorHandler)
 }
 
-btnTranslate.addEventListener("click", translateToKlingon);
+btnTranslate.addEventListener("click", translateToMorse);
